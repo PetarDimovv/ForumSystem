@@ -1,0 +1,15 @@
+﻿@{ 
+	this.ViewData["Title"] = "Edit";
+	this.ViewData["Action"] = "Edit";
+	this.ViewData["SubmitButton"] = "Save";
+	this.ViewData["PostFormVisibility"] = "none";
+}
+
+@model Post;
+
+<h2>@this.Model.Title</h2>
+
+<partial name="_PostForm" />
+
+<br/>
+<a asp-controller="Posts" asp-action="Index" class="btn btn-outline-secondary">Back</a>
