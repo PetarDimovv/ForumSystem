@@ -1,0 +1,15 @@
+﻿@{
+    this.ViewData["Title"] = "Details";
+}
+
+@model Post
+
+<h2>@this.Model.Title</h2>
+
+<div class="p-2">Content: @this.Model.Content</div>
+<div class="p-2">Likes: @this.Model.Likes</div>
+<div class="p-2">Comments: <a asp-controller="Post" asp-action="Comments" asp-route-id="@Model.Id" class="btn btn-warning">Comments</a></div>
+<div class="p-2">Created by: @this.Model.CreatedBy</div>
+
+<br />
+<a asp-controller="Posts" asp-action="Index" class="btn btn-outline-secondary">Back</a>
